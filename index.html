@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>World News API – Busca de Notícias</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style/estilo.css">
+</head>
+
+<body>
+    <div class="cartao">
+        <h1>World News API</h1>
+        
+        <div class="controles" id="controles">
+            <div class="api-info">
+                <label for="chaveApi">Chave da API</label>
+                <input id="chaveApi" type="password" placeholder="SUA_CHAVE_API" value="aacbdb903f4b4fd888bc0509926ce8f9">
+            </div>
+            <div class="consulta-info">
+                <label for="consulta">Consulta</label>
+                <input id="consulta" type="text" placeholder="tecnologia, economia, esportes...">
+            </div>
+            <div class="idioma-info">
+                <label for="idioma">Idioma</label>
+                <select id="idioma">
+                    <option value="en">en</option>
+                    <option value="pt" selected>pt</option>
+                    <option value="es">es</option>
+                    <option value="de">de</option>
+                    <option value="fr">fr</option>
+                </select>
+            </div>
+            <div class="quantidade-info">
+                <label for="quantidade">Quantidade</label>
+                <select id="quantidade">
+                    <option>5</option>
+                    <option selected>10</option>
+                    <option>20</option>
+                    <option>30</option>
+                </select>
+            </div>
+            <div class="ordenacao-info">
+                <label for="ordenacao">Ordenação</label>
+                <select id="ordenacao">
+                    <option value="">padrão</option>
+                    <option value="publish-time">publish-time</option>
+                    <option value="relevance">relevance</option>
+                </select>
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <button id="botaoBuscar">Buscar</button>
+            </div>
+        </div>
+
+        <div id="secao-resultados">
+            <p class="suave"><code id="endpoint">https://api.worldnewsapi.com/search-news</code></p>
+            <div class="grade-resultados" id="resultados"></div>
+            <pre id="jsonBruto">—</pre>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
